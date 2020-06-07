@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Unit5\Repository\Api\ExampleRepositoryInterface" type="Unit5\Repository\Model\ExampleRepository"/>
+
+    <preference for="Unit5\Repository\Api\Data\ExampleInterface" type="Unit5\Repository\Model\Example"/>
+
+    <preference for="Unit5\Repository\Api\Data\ExampleSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+
+</config>

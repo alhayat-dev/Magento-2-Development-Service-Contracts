@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+    <table name="training_repository_example" resource="default" engine="innodb" comment="training_repository_example">
+
+        <column xsi:type="int" name="example_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Example_id"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Name"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created_at"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated_at"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+          <column name="example_id"/>
+        </constraint>
+
+        <constraint xsi:type="unique" referenceId="TRAINING_REPOSITORY_EXAMPLE_NAME">
+          <column name="name"/>
+        </constraint>
+
+    </table>
+
+</schema>
